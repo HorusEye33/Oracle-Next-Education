@@ -26,10 +26,13 @@
 
 	}
 
-	
+	nombre = prompt("Informe su nombre:");
+	pesoInformado = prompt(nombre + ", informe su peso:");
+	alturaInformado = prompt(nombre + ", informe su altura:");
 
-	imprimir("El promedio del imc calculado de Christian y Felipe es: " + (calcularImc(71,1.72)+calcularImc(75,1.73))/2);
+	imcCalculado = calcularImc(pesoInformado,alturaInformado);
 
-	imprimir("El promedio del imc calculado de Gabriela y Luisa es: " + (calcularImc(65,1.68)+calcularImc(55,1.60))/2);
+
+	imprimir(nombre + ", su imc calculado es: " + imcCalculado);
 
 </script>
