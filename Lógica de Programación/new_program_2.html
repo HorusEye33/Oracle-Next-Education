@@ -2,20 +2,19 @@
 
 <script>
 
-    function dibujarCuadradoVerde(argument) {
+    function dibujarCuadrado(x,y,color) {
         var pantalla = document.querySelector("canvas");
         var pincel = pantalla.getContext("2d");
     
         //Cuadrado
-        pincel.fillStyle = "green"; // Color del cuadrado 
-        pincel.fillRect(0,0,50,50);// Coordenadas y tamaño
+        pincel.fillStyle = color; // Color del cuadrado 
+        pincel.fillRect(x,y,50,50);// Coordenadas y tamaño
         pincel.strokeStyle = "black";// Color borde
-        pincel.strokeRect(0,0,50,50);// Coordenadas y tamaño del borde    
+        pincel.strokeRect(x,y,50,50);// Coordenadas y tamaño del borde    
     }
 
-    dibujarCuadradoVerde();
-    dibujarCuadradoVerde();
-    dibujarCuadradoVerde();
-    dibujarCuadradoVerde();
+    dibujarCuadrado(0,0,"green");
+    dibujarCuadrado(50,0,"green");
+    dibujarCuadrado(100,0,"green");
 
 </script>
