@@ -22,13 +22,8 @@
     }
 
     var x = 0;
-
-    function actualizarPantalla() {
-
-        limpiarPantalla();
-        disenharCircunferencia(x,20,10);
-        x++;
-    }
+    var xAleatorio;
+    var yAleatorio;
 
     function disenharObjetivo(x,y) {
 
@@ -43,11 +38,30 @@
         
     }
 
-    var xAleatorio = sortearPosicion(600);
-    var yAleatorio = sortearPosicion(400);
+    function actualizarPantalla() {
 
-    disenharObjetivo(xAleatorio,yAleatorio);
+        limpiarPantalla();
+        xAleatorio = sortearPosicion(600);
+        yAleatorio = sortearPosicion(400);
+        disenharObjetivo(xAleatorio,yAleatorio);
+        x++;
+    }
 
-    //setInterval(actualizarPantalla,100);
+    setInterval(actualizarPantalla,1000);
+
+    function disparar(evento) {
+
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        if ((x < xAleatorio + radio) &&
+            (x > xAleatorio - radio) &&
+            (y < yAleatorio + radio) &&
+            (y > yAleatorio - radio)) {
+            alert("Tiro certero");    
+        }
+    }
+
+    pantalla.onclick = disparar;
 
 </script>
