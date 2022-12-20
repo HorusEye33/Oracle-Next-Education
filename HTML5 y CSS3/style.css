@@ -115,25 +115,3 @@ form label, form p {
 .checkbox {
     margin: 20px 0;
 }
-
-/*Ejemplo de Jerarquía en CSS*/
-
-p { /* p = 1 */
-    color: red;
-}
-
-form p { /* form p = 1 + 1 = 2 */
-    color: blue;
-}
-
-.test { /* .test = 10 */
-    color: yellow;
-}
-
-p.test { /* p.test = 1 + 10 = 11 */
-    color: orange;
-}
-
-#test { /* #test = 100 */
-    color: pink;
-}
