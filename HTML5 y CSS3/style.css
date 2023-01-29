@@ -154,24 +154,6 @@ td,th {
     width: 100%;
 }
 
-/* Selectores Avanzados */
-
-main > p { /* Elemento > hijo */
-    background: red;
-}
-
-img + p { /* Aplica al parrafo despues de imagen */
-    background: yellow;
-}
-
-img ~ p { /* Aplica a todos los parrafos despues de imagen */
-    background: green;
-}
-
-.principal p:not(#mision) { /* Aplicar a todos los parrafos menos al ID mision */
-    background: orange;
-}
-
 .principal {
     padding: 3em 0;
     background: #fefefe;
@@ -249,6 +231,11 @@ img ~ p { /* Aplica a todos los parrafos despues de imagen */
 
 .imagen-diferenciales {
     width: 60%;
+    transition: 400ms;
+}
+
+.imagen-diferenciales:hover {
+    opacity: 0.3;
 }
 
 .video {
